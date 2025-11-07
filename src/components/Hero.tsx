@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -23,11 +24,13 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 px-6 py-20 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Sparkle Icon */}
+          {/* Logo */}
           <div className="inline-flex items-center justify-center mb-8 animate-fade-in">
-            <div className="p-3 rounded-full bg-gold/10 backdrop-blur-sm border border-gold/20">
-              <Sparkles className="w-8 h-8 text-gold" />
-            </div>
+            <img 
+              src={logo} 
+              alt="Magnetic Media & Messaging" 
+              className="h-32 w-auto"
+            />
           </div>
 
           {/* Main Headline */}

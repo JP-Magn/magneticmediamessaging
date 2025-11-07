@@ -1,4 +1,5 @@
 import { Sparkles, Mail, Linkedin, Twitter } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,12 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand */}
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Sparkles className="w-6 h-6 text-gold" />
-                <span className="font-serif text-xl font-bold">M3 Media</span>
+              <div className="flex items-center mb-4">
+                <img 
+                  src={logo} 
+                  alt="Magnetic Media & Messaging" 
+                  className="h-16 w-auto"
+                />
               </div>
               <p className="text-sm text-primary-foreground/70 leading-relaxed">
                 Creating a stir with stories that inspire trust and visibility.
