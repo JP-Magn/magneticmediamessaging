@@ -38,7 +38,7 @@ const About = () => {
               <p>
                 Founded by <span className="text-foreground font-semibold">Jennifer Paire</span>, 
                 a journalist-turned-PR strategist with over 30 years of experience, Magnetic Media & 
-                Messaging is more than a boutique agency—it's a partnership built on authenticity.
+                Messaging is more than a boutique agency - it's a partnership built on authenticity.
               </p>
               
               <p>
@@ -50,7 +50,7 @@ const About = () => {
 
               <div className="my-8 p-6 bg-gradient-elegant rounded-xl border-l-4 border-gold shadow-elegant">
                 <p className="font-serif text-xl text-foreground italic leading-relaxed">
-                  "Every great brand has a story worth telling—it just needs the right words and a 
+                  "Every great brand has a story worth telling - it just needs the right words and a 
                   little spark to create a stir."
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">- Jennifer Paire</p>
