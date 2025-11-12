@@ -1,4 +1,4 @@
-import { Sparkles, Mail, Linkedin, Twitter } from "lucide-react";
+import { Sparkles, Mail, Linkedin, Globe } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -55,11 +55,11 @@ const Footer = () => {
               <h3 className="font-semibold mb-4">Connect With Us</h3>
               <div className="space-y-3">
                 <a 
-                  href="mailto:hello@magneticmedia.com" 
+                  href="mailto:jennifer@magneticmediamessaging.com" 
                   className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-gold transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  hello@magneticmedia.com
+                  jennifer@magneticmediamessaging.com
                 </a>
                 <div className="flex gap-4 pt-2">
                   <a
@@ -72,13 +72,22 @@ const Footer = () => {
                     <Linkedin className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://twitter.com"
+                    href="https://www.alignable.com/canton-ga/jennifer-paire-pr-strategist?user=12398101"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-primary-foreground/10 hover:bg-gold/20 transition-colors"
-                    aria-label="Twitter"
+                    aria-label="Alignable"
                   >
-                    <Twitter className="w-4 h-4" />
+                    <Globe className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://google.com/maps/place/Magnetic+Media+%26+Messaging/data=!4m2!3m1!1s0x0:0x2089a6a1dc3de89f?sa=X&ved=1t:2428&hl=en&ictx=111"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full bg-primary-foreground/10 hover:bg-gold/20 transition-colors"
+                    aria-label="Google Business Profile"
+                  >
+                    <Globe className="w-4 h-4" />
                   </a>
                 </div>
               </div>
