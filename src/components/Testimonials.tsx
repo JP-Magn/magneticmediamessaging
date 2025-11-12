@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     name: "Dr. Joseph Drolshagen",
-    role: "The Rapid Revenue Growth Specialist, Author",
+    role: "The Rapid Revenue Growth Specialist, Author, Reprogramming Your Subconscious Mind: The SMT Method™ For Rapid Results",
     content: "Jennifer is such a powerful and caring PR Strategist! I'm am so excited to be working together!",
     image: "JD"
   }
@@ -80,7 +80,7 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonials */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={testimonial.name} 
