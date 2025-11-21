@@ -1,4 +1,4 @@
-import { Sparkles, Mail, Linkedin, Globe } from "lucide-react";
+import { Sparkles, Mail, Linkedin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -78,16 +78,7 @@ const Footer = () => {
                     className="p-2 rounded-full bg-primary-foreground/10 hover:bg-gold/20 transition-colors"
                     aria-label="Alignable"
                   >
-                    <Globe className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="https://maps.app.goo.gl/gEU8bh1Pd3m6Yq1S6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-primary-foreground/10 hover:bg-gold/20 transition-colors"
-                    aria-label="Google Business Profile"
-                  >
-                    <Globe className="w-4 h-4" />
+                    <Sparkles className="w-4 h-4" />
                   </a>
                 </div>
               </div>

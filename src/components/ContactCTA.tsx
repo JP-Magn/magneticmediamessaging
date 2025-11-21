@@ -16,7 +16,7 @@ const ContactCTA = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -29,16 +29,39 @@ const ContactCTA = () => {
       return;
     }
 
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+    try {
+      // Send email via edge function
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          ...formData,
+          recipientEmail: "jennifer@magneticmediamessaging.com", // Easy to change later
+        }),
+      });
 
-    // Reset form
-    setFormData({ name: "", email: "", company: "", message: "" });
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({ name: "", email: "", company: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or email us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -155,11 +178,14 @@ const ContactCTA = () => {
                     variant="outline" 
                     className="w-full" 
                     size="lg"
-                    onClick={() => window.open('https://calendly.com', '_blank')}
+                    onClick={() => window.open('https://calendly.com/jennifer-magneticmedia', '_blank')}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
                     Book Your Call
                   </Button>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Once you set up your Calendly availability, your booking times will automatically appear here.
+                  </p>
                 </CardContent>
               </Card>
 
