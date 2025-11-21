@@ -4,6 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import MediaBreakthrough from "./pages/packages/MediaBreakthrough";
+import VisibilitySprint from "./pages/packages/VisibilitySprint";
+import StoryStrategyRetainer from "./pages/packages/StoryStrategyRetainer";
+import Addons from "./pages/Addons";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,6 +20,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/packages/media-breakthrough" element={<MediaBreakthrough />} />
+          <Route path="/packages/visibility-sprint" element={<VisibilitySprint />} />
+          <Route path="/packages/story-strategy-retainer" element={<StoryStrategyRetainer />} />
+          <Route path="/addons" element={<Addons />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

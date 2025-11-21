@@ -2,3 +2,6 @@ project_id = "msgxubftbqihdflusfsy"
 
 [functions.upp-evaluator]
 verify_jwt = false
+
+[functions.send-contact-email]
+verify_jwt = false
