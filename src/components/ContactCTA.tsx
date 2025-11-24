@@ -178,13 +178,13 @@ const ContactCTA = () => {
                     variant="outline" 
                     className="w-full" 
                     size="lg"
-                    onClick={() => window.open('https://calendly.com/jennifer-magneticmedia', '_blank')}
+                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1IfFzskmitNplwxBXOjpqhBmj0yUgrBN-17F-eYIq-n6EkW52PrFf-tkzlBk94ovH2TtrdmyQX', '_blank')}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
                     Book Your Call
                   </Button>
                   <p className="text-xs text-muted-foreground mt-2">
-                    Once you set up your Calendly availability, your booking times will automatically appear here.
+                    Your availability will automatically display when visitors click to book.
                   </p>
                 </CardContent>
               </Card>
